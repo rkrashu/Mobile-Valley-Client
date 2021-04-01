@@ -1,0 +1,12 @@
+.productDetails img {
+    width: 350px;
+    height: 250px;
+}
+.productDetails{
+display: inline-block;
+margin: 20px 9px;
+
+}
+.productDetailsFooter{
+    display: inline-block;
+}
