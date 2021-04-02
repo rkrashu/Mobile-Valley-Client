@@ -24,7 +24,6 @@ const Login = () => {
   .signInWithPopup(provider)
   .then((result) => {
       setLoggedInUser(result.user)
-   console.log(result.user.email)
    history.replace(from);
   }).catch((error) => {
     

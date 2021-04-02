@@ -10,7 +10,6 @@ const Order = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     },[loggedInUser.email])
-    console.log(products)
         
     if (products.length !== 0) {
         return (

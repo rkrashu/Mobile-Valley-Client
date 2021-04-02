@@ -11,7 +11,6 @@ const ChecKOut = () => {
         fetch(`https://apple-custard-55014.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             setProductInfo(data)})
     },[id])
 
