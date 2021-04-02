@@ -23,12 +23,17 @@ const ChecKOut = () => {
       orderDetails.userName = userName
       orderDetails.email = userEmail
       orderDetails.date = date
+      delete orderDetails._id
         fetch('https://apple-custard-55014.herokuapp.com/orderConfirm',{
                 method: "POST",
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(orderDetails)
       })
-              .then(res => alert("Order Done, Thank you."))
+              .then(res => {
+                if(res){
+                  alert("Order Done, Thank you.")
+                }
+              })
     }
     return (
         <Container style={{marginTop:'150px'}}>
