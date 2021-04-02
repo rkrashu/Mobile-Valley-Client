@@ -11,12 +11,17 @@ const ManageProduct = () => {
         .then(data => setAllProducts(data))
     },[])
 
-    const deleteItem = id =>{
+    const deleteItem = (e,id) =>{
+        // console.log(e.target.parentNode)
         fetch(`https://apple-custard-55014.herokuapp.com/delete/${id}`,{
             method: "DELETE",
         })
         .then(res => {
-            console.log(res)
+            if (res) {
+                // e.target.parentNode.parentNode.style.display="none"            }
+           
+            alert("Product Delete Successfully")
+            }
         })
     }
     return (
@@ -37,7 +42,7 @@ const ManageProduct = () => {
                             <tr>
                                 <td>{pd.name}</td>
                                 <td>{pd.price}</td>
-                                <td><button onClick={()=>deleteItem(pd._id)}>{<AiFillDelete />}</button></td>
+                                <td><button onClick={(e)=>deleteItem(e, pd._id)}>{<AiFillDelete />}</button></td>
                                 
                              </tr>
                         ))

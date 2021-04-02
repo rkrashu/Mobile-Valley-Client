@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 
 
@@ -31,7 +31,7 @@ const AddProducts = () => {
                 body: JSON.stringify(productData)
             })
             .then(data => {
-                console.log(data)
+                alert("Product Added Successfully")
             })
         }
         else{
@@ -41,13 +41,23 @@ const AddProducts = () => {
     };
     return (
         <Container>
-            
-           <form onSubmit={handleSubmit(onSubmit)}>
+            <Card border="primary" style={{ width: '18rem' }}>
+                <Card.Header>Add Product</Card.Header>
+                <Card.Body>
+                <Card.Text>
+                <form onSubmit={handleSubmit(onSubmit)}>
             <input type="text" name="name" placeholder='Product name' ref={register} /> <br/>
             <input type="text" name="price" placeholder= 'Price' ref={register} />  <br/>  
-            <input type="file" name="image" onChange={handleImageUpload} /> <br/>
-            <input type="submit" />
+            <input type="file" name="image" onChange={handleImageUpload} /> <br/><br/>
+            <div style={{textAlign:'center'}}>
+            <input style={{backgroundColor:'black', border:'1px solid black',borderRadius:'5px', color:'white', height:'35px', width: '120px'}} type="submit" />
+            </div>
             </form>
+                </Card.Text>
+                </Card.Body>
+            </Card>
+            
+         
         </Container>
     );
 };

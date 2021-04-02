@@ -56,7 +56,7 @@ const Login = () => {
                 </Button>
             </Form>
               <div className='container' >
-              <button style={{marginTop:'40px',marginLeft:'70px', backgroundColor:'#1D8348', color:'white', width:'300px'}} onClick={()=>handleLoginIn()}>{<AiFillGoogleCircle />} Login in with Google</button>
+              <button style={{marginTop:'40px',marginLeft:'70px', backgroundColor:'#1D8348', color:'white', width:'300px',height: '50px'}} onClick={()=>handleLoginIn()}>{<AiFillGoogleCircle />} Login in with Google</button>
               </div>
       </div>
 

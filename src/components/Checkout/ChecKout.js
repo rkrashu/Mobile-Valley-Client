@@ -28,7 +28,7 @@ const ChecKOut = () => {
                 headers: {'content-type': 'application/json'},
                 body: JSON.stringify(orderDetails)
       })
-              .then(res => console.log(res))
+              .then(res => alert("Order Done, Thank you."))
     }
     return (
         <Container style={{marginTop:'150px'}}>
@@ -37,7 +37,7 @@ const ChecKOut = () => {
             <Table striped bordered hover>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Product Name</th>
       <th>Quantity</th>
       <th>Price</th>
     </tr>
@@ -55,7 +55,7 @@ const ChecKOut = () => {
   </tbody>
 </Table>
 <div style={{textAlign: 'right'}}>
-<button onClick={()=>handleBuyNow(productInfo)}>CheckOut</button>
+<button style={{backgroundColor:'black', border:'1px solid black',borderRadius:'5px', color:'white', height:'35px', width: '120px'}} onClick={()=>handleBuyNow(productInfo)}>Submit Order</button>
 </div>
 
         </Container>
