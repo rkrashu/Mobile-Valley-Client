@@ -1,4 +1,4 @@
-## English Premier League All Teams Information React App
+
 [Live Website] (https://mobile-valley.web.app)
 
 
